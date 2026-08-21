@@ -1,0 +1,15 @@
+{
+  "id": "clear-auditable-foundation-model-radiology",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": ["Tianyu Han", "Riga Wu", "Yu Tian", "Firas Khader", "Lisa C. Adams", "Keno K. Bressem", "Christos Davatzikos", "Jakob Nikolas Kather", "Li Shen", "David A. Mankoff", "Eduardo Mortani Barbosa", "Daniel Truhn"],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "다중 소견 라벨링"],
+  "takeaway": "흉부 X-ray 판독을 개별 임상 소견 단위로 분해 가능한 개념 임베딩 기반 파운데이션 모델이, 미국·유럽·아시아 4개 외부 기관 데이터에서 최고 수준의 분류 성능과 감사 가능한 예측 근거를 동시에 달성했다.",
+  "relevance": "우리 코호트는 5개 기관(INST01~05)에서 수집되었고 Effusion|Infiltration, Atelectasis|Effusion|Infiltration 처럼 복합 소견이 흔하며 판독 상태도 preliminary/final/amended/addendum이 섞여 있다. CLEAR가 강조하는 '기관 간 외부 검증'과 '개별 소견별 근거 분해'는 이런 다기관·다중 라벨 데이터의 신뢰성 점검과 잘 맞물린다.",
+  "caveat": "우리 데이터는 87만 건 규모의 사전학습이나 4개국 외부검증셋과 규모·다양성 면에서 큰 차이가 있어, CLEAR가 보고한 zero-shot 성능이나 개념 병목 모델의 정확도를 우리 코호트로 재현할 수는 없다.",
+  "check": "우리 5개 기관 데이터에서 기관별 판독 스타일(장비 device_id, view_position 비중 차이 등)이 개념 임베딩 기반 예측의 근거 분해 안정성에 영향을 주는지 확인해볼 만하다."
+}
