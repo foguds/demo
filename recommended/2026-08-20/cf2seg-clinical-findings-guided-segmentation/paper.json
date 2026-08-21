@@ -1,0 +1,15 @@
+{
+  "id": "cf2seg-clinical-findings-guided-segmentation",
+  "title": "Grounding Radiology Report Findings into Medical Image Segmentation",
+  "authors": ["Suyang Xi", "Songtao Hu", "Shansong Wang", "Hong Ding", "Yuheng Li", "Wenfeng He", "Kuo Zhang", "Luke del Balzo", "Chong Zhong", "Mingzhe Hu", "Catherine C. Liu", "Yunhao Liu"],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-03051-0",
+  "abstract": "Routine radiology practice documents abnormalities primarily in narrative reports rather than pixel-level annotations. However, many clinically important analyses require spatially localized evidence. This mismatch limits the reuse of large-scale image-report archives for spatially resolved quantitative analysis, as heterogeneous clinical findings cannot be directly translated into consistent spatial representations. We therefore present Clinical-Findings-Guided Segmentation (CF2Seg), a chest X-ray segmentation framework that learns spatial representations directly from full radiology findings. We further curate a multi-source benchmark comprising 53,386 examinations, each paired with expert spatial annotations and corresponding reports across diverse thoracic pathologies and institutions. CF2Seg uses a dual-stage text–image fusion strategy in which report findings guide feature formation and are revisited during decoding to improve boundary delineation across scales. On a unified multi-source benchmark, CF2Seg achieves strong overall performance and remains stable under clinically realistic variation, including distribution shift, annotation scarcity, and clinically realistic image and report perturbations. Beyond segmentation accuracy, CF2Seg-derived masks preserve proportional lesion-burden trends with strong agreement to expert annotations, supporting retrospective spatial annotation and quantitative reuse of large-scale clinical image–report archives.",
+  "axes": ["기관 간 일반화", "다중 소견 라벨링"],
+  "takeaway": "흉부 X-ray 판독문의 서술형 소견을 그대로 학습 신호로 이용해, 별도의 픽셀 단위 주석 없이도 다기관 데이터에서 안정적인 병변 분할 성능을 얻을 수 있음을 보였다.",
+  "relevance": "우리 코호트는 272건 중 145건이 No Finding이고 나머지는 Infiltration, Atelectasis 등 다중 라벨이 동시에 부여된 복합 소견이 다수이며, INST01~05 다섯 기관에서 수집되어 판독문(report_text)이 전 건에 존재한다. CF2Seg처럼 판독문 텍스트를 활용한 접근은 별도 분할 주석 없이도 우리 데이터의 다기관·다병변 특성을 정량화하는 데 활용할 여지가 있다.",
+  "caveat": "우리 데이터에는 픽셀 단위 병변 경계 주석이 없어 CF2Seg가 보고한 분할 정확도나 병변 부담(lesion-burden) 추세와의 일치도를 직접 재현하거나 검증할 수 없다.",
+  "check": "우리 기관 간(INST01~05) 판독문 서술 스타일 차이가 이런 텍스트-이미지 융합 모델의 분할 안정성에 어떤 영향을 줄지 확인해볼 필요가 있다."
+}
